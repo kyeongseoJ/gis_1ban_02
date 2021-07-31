@@ -4,4 +4,4 @@ from django.shortcuts import render
 # Create your views here.
 
 def open_page (request):
-    return HttpResponse('Open the World!')
+    return render(request, 'accountapp/open_page.html')

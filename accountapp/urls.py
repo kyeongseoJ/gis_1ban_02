@@ -5,5 +5,5 @@ from accountapp.views import open_page
 app_name = 'accountapp'
 
 urlpatterns = [
-    path('open/',open_page , name='open')
+    path('open/',open_page , name='open'),
 ]

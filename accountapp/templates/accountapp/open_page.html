@@ -4,7 +4,16 @@
 {% block content %}
 
     <div style = "height: 20rem; background-color : aqua; margin:2rem; border-radius:1rem;">
-    <h1>TEST</h1>
+         <h1>
+             testing
+         </h1>
+    
+         <form action="/accounts/open/" method="post">
+             {% csrf_token %}
+             <input type="submit" class="px-5 btn btn-dark rounded-pill">
+         </form>
+
+        <h3> {{ text }}</h3>
     </div>
 
 {% endblock %}

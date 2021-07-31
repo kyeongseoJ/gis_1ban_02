@@ -1,0 +1,25 @@
+.kissen_logo{
+    text-align: center; margin: 2rem 0;
+}
+
+.kissen_header_logo{
+    font-family: 'Monofett', cursive; font-size: 100px;
+}
+
+.kissen_header_button{
+    margin-bottom: 2rem;
+}
+
+.kissen_footer_logo{
+    font-family: 'Monofett', cursive;
+    -webkit-transform: rotateX(180deg);
+    font-size: 30px;
+}
+
+.kissen_footer_button{
+    font-size: 0.6rem;
+}
+
+
+
+

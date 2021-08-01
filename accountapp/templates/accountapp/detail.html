@@ -11,11 +11,20 @@
          <div class="m-5">
              {{ target_user.date_joined }}
          </div>
+        {% if user == target_user %}
          <div>
-            <p>
-                <a href="{% url 'accountapp:update' pk=user.pk %}"> Update Info </a>
-            </p>
+             <p>
+                 <a href="{% url 'accountapp:update' pk=user.pk %}" class="hideline">
+                     Update Info
+                 </a>
+             </p>
          </div>
+         <div>
+             <a href="{% url 'accountapp:delete' pk=target_user.pk %}" class="hideline">
+                 Quit
+             </a>
+         </div>
+        {% endif %}
     </div>
 
 {% endblock %}

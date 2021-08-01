@@ -3,17 +3,28 @@
 
 {% block content %}
 
-    <div style = "height: 20rem; background-color : aqua; margin:2rem; border-radius:1rem;">
+    <div style = "margin:2rem; border-radius:1rem; text-align: center">
          <h1>
              testing
          </h1>
     
          <form action="/accounts/open/" method="post">
              {% csrf_token %}
-             <input type="submit" class="px-5 btn btn-dark rounded-pill">
-         </form>
+             <div>
+                 <input type="text" name="open_page_input">
+             </div>
+             <div>
+                 <input type="submit" class="px-5 btn btn-dark rounded-pill">
+             </div>
 
-        <h3> {{ text }}</h3>
+         </form>
+        {% if open_page_list %}
+            {% for open_page in open_page_list %}
+             <h4>
+                 {{ open_page.text }}
+             </h4>
+            {% endfor %}
+        {% endif %}
     </div>
 
 {% endblock %}

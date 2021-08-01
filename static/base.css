@@ -29,6 +29,17 @@
     margin: 1rem 1.5rem;
 }
 
+.profile_image{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 20rem;
+    object-fit: cover;
+}
+
+.NNR_B{
+    font-family: 'NanumSquareRoundOTFEB', cursive;
+}
+
 
 
 

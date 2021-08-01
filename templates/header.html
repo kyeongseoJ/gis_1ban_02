@@ -5,8 +5,17 @@
     <div class="kissen_header_button">
         <span>nav1</span>
         <span>nav2</span>
-        <span>nav3</span>
-        <span>nav4</span>
-
+     {% if not user.is_authenticated %}
+        <span>
+            <a href="{% url 'accountapp:login' %}" class="hideline"> Login </a>
+        </span>
+        <span>
+            <a href="{% url 'accountapp:create' %}" class="hideline"> Sign up </a>
+        </span>
+              {% else %}
+                 <span>
+                      <a href="{% url 'accountapp:logout' %}" class="hideline">  Logout </a>
+                 </span>
+        {% endif %}
     </div>
 </div>

@@ -4,10 +4,10 @@ from articleapp.models import Article
 
 
 def article_ownership_required(func):
-    def decorated(request, *args, **kwargs):
+    def decorated(request, *arg, **kwargs):
         target_article = Article.objects.get(pk=kwargs['pk'])
         if target_article.writer == request.user:
-            return func
+            return func(request, *arg, **kwargs)
         else:
             return HttpResponseForbidden()
     return decorated

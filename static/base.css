@@ -1,22 +1,22 @@
-.kissen_logo{
+.title_logo{
     text-align: center; margin: 2rem 0;
 }
 
-.kissen_header_logo{
-    font-family: 'Monofett', cursive; font-size: 100px;
+.title_header_logo{
+   font-family: 'Fredoka One', cursive; font-size: 80px;
 }
 
-.kissen_header_button{
+.title_header_button{
     margin-bottom: 2rem;
 }
 
-.kissen_footer_logo{
-    font-family: 'Monofett', cursive;
+.title_footer_logo{
+    font-family: 'Fredoka One', cursive;;
     -webkit-transform: rotateX(180deg);
     font-size: 30px;
 }
 
-.kissen_footer_button{
+.title_footer_button{
     font-size: 0.9rem;
 }
 

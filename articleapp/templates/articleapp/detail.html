@@ -12,15 +12,29 @@
         </div>
         <div>
              {# 게시글 내용 #}
-            <img src="{{ target_article.image.url }}" alt="">
-            <hr>
-            {{ target_article.content }}
+            <img src="{{ target_article.image.url }}"
+                 alt=""
+                 class="article_image">
+            <div class="article_content">
+                 {{ target_article.content }}
+            </div>
+
+            {%  if target_article.writer == user %}
             <div>
-                <a href="{% url 'accountapp:update' pk=target_article.pk %}"
-                class="btn btn-success roundrd-pill px-5">
+                <a href="{% url 'articleapp:update' pk=target_article.pk %}"
+                class="btn btn-success rounded-pill px-5">
                     Update
                 </a>
+                  <a href="{% url 'articleapp:delete' pk=target_article.pk %}"
+                class="btn btn-danger rounded-pill px-5">
+                    Delete
+                </a>
             </div>
+             {% endif %}
+        </div>
+    <hr>
+        <div>
+
         </div>
 
     </div>

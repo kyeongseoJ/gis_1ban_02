@@ -4,24 +4,25 @@
     </div>
     <div class="title_header_button">
         <span>
-            <a href="{%  url 'articleapp:list' %}">
+            <a href="{%  url 'articleapp:list' %}"
+            class="hideline nav_a_tag">
                 Articles
             </a>
         </span>
         <span>nav2</span>
      {% if not user.is_authenticated %}
         <span>
-            <a href="{% url 'accountapp:login' %}" class="hideline"> Login </a>
+            <a href="{% url 'accountapp:login' %}" class="hideline nav_a_tag"> Login </a>
         </span>
         <span>
-            <a href="{% url 'accountapp:create' %}" class="hideline"> Sign up </a>
+            <a href="{% url 'accountapp:create' %}" class="hideline nav_a_tag"> Sign up </a>
         </span>
               {% else %}
                  <span>
-                    <a href="{% url 'accountapp:detail' pk=user.pk %}" class="hideline"> MyPage </a>
+                    <a href="{% url 'accountapp:detail' pk=user.pk %}" class="hideline nav_a_tag"> MyPage </a>
                  </span>
                  <span>
-                      <a href="{% url 'accountapp:logout' %}" class="hideline">  Logout </a>
+                      <a href="{% url 'accountapp:logout' %}" class="hideline nav_a_tag">  Logout </a>
                  </span>
         {% endif %}
     </div>

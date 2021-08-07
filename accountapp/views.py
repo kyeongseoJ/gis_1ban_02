@@ -37,6 +37,9 @@ class AccountCreateView(CreateView):
     success_url = reverse_lazy('accountapp:open')
     template_name = 'accountapp/create.html'
 
+    def get_success_url(self):
+        return reverse('accountapp:detail', kwargs={'pk' : self.object.pk})
+
 
 class AccountDetailView(DetailView):
     model = User
@@ -54,6 +57,9 @@ class AccountUpdateView(UpdateView):
     context_object_name = 'target_user'
     success_url = reverse_lazy('accountapp:open')
     template_name = 'accountapp/update.html'
+
+    def get_success_url(self):
+        return reverse('accountapp:detail', kwargs={'pk' : self.object.pk})
 
 
 @method_decorator(has_ownership, 'get')

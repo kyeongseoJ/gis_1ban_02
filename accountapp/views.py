@@ -34,7 +34,7 @@ def open_page (request):
 class AccountCreateView(CreateView):
     model = User
     form_class = UserCreationForm
-    success_url = reverse_lazy('accountapp:open')
+    # success_url = reverse_lazy('accountapp:open')
     template_name = 'accountapp/create.html'
 
     def get_success_url(self):

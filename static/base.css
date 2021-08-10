@@ -3,7 +3,8 @@
 }
 
 .title_header_logo{
-   font-family: 'Fredoka One', cursive; font-size: 80px;
+   margin: 2rem 0;
+   font-family: 'Fredoka One', cursive;
 }
 
 .title_header_button{

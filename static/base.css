@@ -73,3 +73,16 @@
 .nav_a_tag:hover{
     color: darkorange;
 }
+
+.comment_box{
+    border: solid;
+    border-color: #686262;
+    text-align: left;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.1rem;"
+}
+
+
+

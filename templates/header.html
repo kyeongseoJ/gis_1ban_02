@@ -1,6 +1,6 @@
 <div class="title_logo">
     <div>
-        <h1 class="title_header_logo"> Niedliches </h1>
+        <h1 class="title_header_logo"> ///// </h1>
     </div>
     <div class="title_header_button">
         <span>
@@ -9,7 +9,11 @@
                 Articles
             </a>
         </span>
-        <span>nav2</span>
+        <span>
+            <a href="{% url 'projectapp:list' %}">
+                Projects
+            </a>
+        </span>
         {% if not user.is_authenticated %}
         <span>
             <a href="{% url 'accountapp:login' %}" class="hideline nav_a_tag"> Login </a>

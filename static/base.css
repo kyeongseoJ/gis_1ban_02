@@ -16,6 +16,7 @@
     font-family: 'Fredoka One', cursive;;
     -webkit-transform: rotateX(180deg);
     font-size: 30px;
+    color: orangered;
 }
 
 .title_footer_button{

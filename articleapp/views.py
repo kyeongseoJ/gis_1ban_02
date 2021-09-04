@@ -24,7 +24,7 @@ class ArticleCreateView(CreateView):
     def form_valid(self, form):
         form.instance.writer =self.request.user
         return super().form_valid(form)
-    
+
     def get_success_url(self):
         return reverse('articleapp:detail', kwargs={'pk': self.object.pk})
 
@@ -60,4 +60,4 @@ class ArticleListView(ListView):
     model = Article
     context_object_name = 'article_list'
     template_name = 'articleapp/list.html'
-    paginate_by = 4
+    paginate_by = 6

@@ -20,7 +20,7 @@
 }
 
 .title_footer_button{
-    font-size: 0.9rem;
+    font-size: 0.6rem;
 }
 
 .hideline{
@@ -85,6 +85,11 @@
     padding: 1rem;
     font-size: 1.1rem;"
 }
+
+hr{
+    color: tomato;
+}
+
 
 @media screen and (max-width: 500px){
     html{

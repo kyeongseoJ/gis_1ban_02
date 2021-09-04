@@ -7,12 +7,15 @@
         <div>
             {# 제목/ 작성자/ 작성일 #}
             <h1>{{ target_article.title }}</h1>
-            <div>
+            <div class="my-3">
                 <a href="{% url 'likeapp:article_like' article_pk=target_article.pk %}"
-                class="material-icons">
+                class="material-icons hideline"
+                style="vertical-align: middle; color:#ff5263">
                     favorite
                 </a>
-                {{ target_article.like }}
+                <span style="vertical-align: middle">
+                    {{ target_article.like }}
+                </span>
             </div>
             <h4>{{ target_article.writer.profile.nickname }}</h4>
             <p>{{ target_article.create_at }}</p>

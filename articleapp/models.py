@@ -16,6 +16,8 @@ class Article(models.Model):
 
     create_at = models.DateField(auto_now_add=True)
 
+    like = models.IntegerField(default=0)
+
     class Meta:
         ordering = ["-pk"]
 

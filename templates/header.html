@@ -23,6 +23,7 @@
                 </a>
             </span>
         {% endif %}
+
         {% if not user.is_authenticated %}
         <span>
             <a href="{% url 'accountapp:login' %}" class="hideline nav_a_tag"> Login </a>

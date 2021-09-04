@@ -26,13 +26,14 @@ class SubscriptionView(RedirectView):
         return super().get(request, *args, **kwargs)
 
     def get_redirect_url(self, *args, **kwargs):
-        return reverse('projectapp:detail', kwargs={'pk':kwargs['project_pk']})
+        return reverse('projectapp:detail', kwargs={'pk': kwargs['project_pk']})
+
 
 @method_decorator(login_required, 'get')
 class SubscriptionListView(ListView):
     model = Article
     context_object_name = 'article_list'
-    template_name = 'subscribapp/list.html'
+    template_name = 'subscribeapp/list.html'
     paginate_by = 20
 
     def get_queryset(self):

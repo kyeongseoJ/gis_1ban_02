@@ -3,39 +3,39 @@
         <h1 class="title_header_logo"> ///// </h1>
     </div>
     <div class="title_header_button">
-        <span>
+        <span class="mx-2">
             <a href="{%  url 'articleapp:list' %}"
             class="hideline nav_a_tag">
                 Articles
             </a>
         </span>
-        <span>
+        <span class="mx-2">
             <a href="{% url 'projectapp:list' %}"
             class="hideline nav_a_tag">
                 Projects
             </a>
         </span>
         {% if user.is_authenticated %}
-            <span>
-                <a href="{% url 'subscribeapp:list' %}"
-                class="hideline nav_a_tag">
-                    Subscription
-                </a>
-            </span>
+        <span class="mx-2">
+            <a href="{% url 'subscribeapp:list' %}"
+            class="hideline nav_a_tag">
+                Subscription
+            </a>
+        </span>
         {% endif %}
 
         {% if not user.is_authenticated %}
-        <span>
+        <span class="mx-2">
             <a href="{% url 'accountapp:login' %}" class="hideline nav_a_tag"> Login </a>
         </span>
-        <span>
+        <span class="mx-2">
             <a href="{% url 'accountapp:create' %}" class="hideline nav_a_tag "> Sign up </a>
         </span>
               {% else %}
-                 <span>
+                 <span class="mx-2">
                     <a href="{% url 'accountapp:detail' pk=user.pk %}" class="hideline nav_a_tag"> MyPage </a>
                  </span>
-                 <span>
+                 <span class="mx-2">
                       <a href="{% url 'accountapp:logout' %}" class="hideline nav_a_tag" >  Logout </a>
                  </span>
         {% endif %}

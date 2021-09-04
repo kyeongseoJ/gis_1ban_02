@@ -16,23 +16,6 @@ from accountapp.models import Open_Page
 from articleapp.models import Article
 
 
-@login_required(login_url=reverse_lazy('accountapp:login'))
-def open_page (request):
-    if request.method == 'POST':
-
-        temp = request.POST.get('open_page_input')
-
-        new_open_page = Open_Page()
-        new_open_page.text = temp
-        new_open_page.save()
-
-        return HttpResponseRedirect(reverse('accountapp:open'))
-
-    else:
-        open_page_list = Open_Page.objects.all()
-        return render(request, 'accountapp/open_page.html', context={'open_page_list': open_page_list})
-
-
 class AccountCreateView(CreateView):
     model = User
     form_class = UserCreationForm
@@ -77,7 +60,7 @@ class AccountUpdateView(UpdateView):
 class AccountDeleteView(DeleteView):
     model = User
     context_object_name = 'target_user'
-    success_url = reverse_lazy('accountapp:open')
+    success_url = reverse_lazy('articleapp:list')
     template_name = 'accountapp/delete.html'
 
 

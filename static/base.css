@@ -5,8 +5,8 @@
 .title_header_logo{
    margin: 2rem 0;
    font-family: 'Fredoka One', cursive;
-    color: orangered;
 }
+
 
 .title_header_button{
     margin-bottom: 2rem;
@@ -16,7 +16,7 @@
     font-family: 'Fredoka One', cursive;;
     -webkit-transform: rotateX(180deg);
     font-size: 30px;
-    color: orangered;
+    color: midnightblue;
 }
 
 .title_footer_button{
@@ -96,4 +96,5 @@ hr{
         font-size: 13px;
     }
 }
+
 
